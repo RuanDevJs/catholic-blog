@@ -106,6 +106,10 @@ export const Grid = styled.div`
 
   gap: 2rem;
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Articles = styled.div``;
@@ -113,19 +117,30 @@ export const Articles = styled.div``;
 export const Post = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
 `;
 
 export const Poster = styled.div`
   position: relative;
-  display: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  margin-bottom: 1rem;
+
+  &:nth-child(2) {
+    height: 100%;
+  }
 `;
 
 export const PosterPlayer = styled.div`
   width: 100%;
-  height: 150px;
+  height: 170px;
 
   background-color: #000;
   padding: 1rem;
@@ -158,11 +173,11 @@ export const PosterPlayer = styled.div`
 `;
 
 export const PosterImage = styled.img`
-  /* width: calc(100vw * 0.72);
-  height: calc(100vw * 0.2);
+  width: calc(100vw * 0.72);
+  height: 100%;
 
   object-fit: cover;
-  border-radius: 400px 400px 0 0; */
+  border-radius: 400px 400px 0 0;
 `;
 
 export const Player = styled.div`
