@@ -91,7 +91,7 @@ export const Play = styled.div`
     cursor: pointer;
   }
 
-  span {
+  a {
     font-size: 0.875rem;
     font-weight: 500;
 

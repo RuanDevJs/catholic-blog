@@ -4,6 +4,7 @@ import Missa from "../../../../assets/Missa.jpg";
 import Poster1 from "../../../../assets/Poster1.jpg";
 
 import * as Styled from "./styles";
+import { Link } from "react-router-dom";
 
 export default function Poster() {
   return (
@@ -15,7 +16,7 @@ export default function Poster() {
           <p>Memória de São Paulo Miki e seus companheiros mártires.</p>
           <Styled.Play>
             <Play size={20} weight="fill" />
-            <span>Ouvir meditação</span>
+            <Link to="/meditation">Ouvir meditação</Link>
           </Styled.Play>
         </Styled.Player>
       </Styled.Poster>
