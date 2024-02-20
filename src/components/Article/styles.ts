@@ -12,8 +12,15 @@ export const Container = styled.div`
 
   cursor: pointer;
 
+  transition: 0.32s ease-in-out;
+
   &:hover {
     opacity: 0.72;
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    text-align: center;
   }
 `;
 
@@ -24,6 +31,10 @@ export const Image = styled.img`
   object-fit: cover;
 
   border-radius: 4px;
+
+  @media only screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Content = styled.div`

@@ -1,17 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import * as Styled from "./styles";
 
 interface IProps {
   data: {
+    id: string;
     title: string;
     description: string;
     poster: string;
-    tag: "SANTOS & MÁRTIRES" | "ESPIRITUALIDADE" | "HISTÓRIA DA IGREJA";
+    tag: string;
   };
 }
 
 export default function Article({ data }: IProps) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`/article/${data.id}`);
+  }
+
   return (
-    <Styled.Container>
+    <Styled.Container onClick={handleClick}>
       <Styled.Image src={data.poster} draggable={false} />
       <Styled.Content>
         <span>{data.tag}</span>

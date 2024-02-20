@@ -9,11 +9,11 @@ export default function Header() {
           <List size={24} color="#fff" weight="bold" />
           <Styled.Text>MENU</Styled.Text>
         </Styled.Menu>
-        <Styled.Title>Christo Nihil Praeponere</Styled.Title>
-        <Styled.Menu style={{ gap: "2rem" }}>
+        <Styled.Title to="/">Christo Nihil Praeponere</Styled.Title>
+        <Styled.RightMenu style={{ gap: "2rem" }}>
           <Styled.Text>INSCREVER-SE</Styled.Text>
           <Styled.Text>ENTRAR</Styled.Text>
-        </Styled.Menu>
+        </Styled.RightMenu>
       </Styled.Container>
     </Styled.Background>
   );

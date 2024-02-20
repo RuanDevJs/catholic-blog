@@ -1,13 +1,15 @@
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/index.routes";
+
 import Header from "./components/Header";
-import Home from "./pages/Home";
 import { GlobalCss } from "./styles/Global";
 
 export default function App() {
   return (
-    <div>
+    <BrowserRouter>
       <GlobalCss />
       <Header />
-      <Home />
-    </div>
+      <Router />
+    </BrowserRouter>
   );
 }

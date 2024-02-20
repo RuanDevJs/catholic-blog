@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Background = styled.header`
@@ -30,6 +31,18 @@ export const Menu = styled.div`
   gap: 4px;
 
   cursor: pointer;
+
+  &:nth-child(1):hover {
+    opacity: 0.72;
+  }
+
+  transition: 0.32s ease-in-out;
+`;
+
+export const RightMenu = styled(Menu)`
+  span:hover {
+    opacity: 0.72;
+  }
 `;
 
 export const Text = styled.span`
@@ -37,21 +50,22 @@ export const Text = styled.span`
   font-weight: 600;
   color: #fff;
 
-  &:hover {
-    opacity: 0.72;
-  }
-
   @media only screen and (max-width: 720px) {
     display: none;
   }
+
+  transition: 0.32s ease-in-out;
 `;
 
-export const Title = styled.span`
+export const Title = styled(Link)`
   font-size: 1.125rem;
   font-weight: 600;
   color: #fff;
 
-  &:hover span {
+  cursor: pointer;
+  transition: 0.32s ease-in-out;
+
+  &:hover {
     opacity: 0.72;
   }
 `;
